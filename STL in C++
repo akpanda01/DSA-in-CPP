@@ -1,0 +1,68 @@
+//STL Functions useful in DSA
+
+
+//ARRAYS AND VECTORS
+
+1) sort(begin, end) : Sorts an array in ascending order.
+      sort(arr, arr + n); // For array
+      sort(vec.begin(), vec.end()); // For vector
+
+2) reverse(begin, end) : Reverses the order of elements in an array or vector.
+      reverse(arr, arr + n); // For array
+      reverse(vec.begin(), vec.end()); // For vector
+
+3) next_permutation(begin, end) : Generates the next lexicographical permutation.
+      next_permutation(arr, arr + n);
+
+4)prev_permutation(begin, end) : Generates the previous lexicographical permutation.
+      prev_permutation(arr, arr + n);
+
+5)lower_bound(begin, end, value) : Returns an iterator to the first element greater than or equal to the given value.
+      int* it = lower_bound(arr, arr + n, x);
+
+6) upper_bound(begin, end, value) : Returns an iterator to the first element greater than the given value.
+      int* it = upper_bound(arr, arr + n, x);
+
+7) binary_search(begin, end, value) : Checks if the value exists in a sorted array.
+      bool found = binary_search(arr, arr + n, x);
+
+8) find(begin, end, value) : Finds the first occurrence of a value and returns an iterator.
+      auto it = find(arr, arr + n, x);
+
+9) min_element(begin, end) : Finds the smallest element in the array.
+      int min_val = *min_element(arr, arr + n);
+
+10) max_element(begin, end) : Finds the largest element in the array.
+      int max_val = *max_element(arr, arr + n);
+
+11) accumulate(begin, end, initial_sum) : Computes the sum of elements.
+      int sum = accumulate(arr, arr + n, 0);
+
+12) count(begin, end, value) : Counts the occurrences of a value.
+      int cnt = count(arr, arr + n, x);
+
+13) unique(begin, end) : Removes duplicate consecutive elements.
+      int* new_end = unique(arr, arr + n);
+
+14) distance(first, last) : Finds the distance between two iterators (useful for indices).
+      int idx = distance(arr, it);
+
+15) fill(begin, end, value) : Assigns a value to all elements.
+      fill(arr, arr + n, 0);
+
+16) replace(begin, end, old_value, new_value) : Replaces all occurrences of a value with another value.
+      replace(arr, arr + n, old_val, new_val);
+
+17) rotate(begin, middle, end) : Rotates the array to bring the middle element to the start.
+      rotate(arr, arr + k, arr + n);
+
+
+
+
+
+
+
+
+
+
+
