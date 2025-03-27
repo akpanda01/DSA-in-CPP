@@ -1,32 +1,26 @@
 class Solution {
   public:
-    Node* linkdelete(Node* head, int m, int n) {
-        Node* curr = head;
+    Node* linkdelete(Node* head, int n, int m) {
+       Node* curr=head;
+       Node* delh=nullptr;
+       if(m==0)
+       return nullptr;
+       if(n==0)
+       return head;
+       while(curr!=nullptr){
+           for(int i=0;i<m-1&&curr!=nullptr;i++){
+               curr=curr->next;
+           }
+           if(curr==nullptr)
+           break;
+           delh=curr->next;
+           for(int j=0;j<n&&delh!=nullptr;j++){
+               delh=delh->next;
+           }
+           curr->next=delh;
+           curr=delh;
+       }
+       return head;
         
-        while (curr) {
-            // Skip m nodes
-            for (int i = 1; i < m && curr; i++) {
-                curr = curr->next;
-            }
-            
-            // If we reach the end, stop
-            if (!curr) break;
-            
-            // Start deleting n nodes
-            Node* temp = curr->next;
-            for (int i = 0; i < n && temp; i++) {
-                Node* nextNode = temp->next;
-                delete temp; // Free memory
-                temp = nextNode;
-            }
-            
-            // Connect the remaining list
-            curr->next = temp;
-            
-            // Move to the next segment
-            curr = temp;
-        }
-        
-        return head;
     }
 };
