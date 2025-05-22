@@ -1,2 +1,3 @@
-# DSA-Questions-in-CPP
-Welcome to the **DSA Questions in C++** repository! This collection contains solutions to a variety of Data Structures and Algorithms (DSA) problems, implemented in C++.
+# Maths For DSA
+
+This covers the core concepts of Number Theory that are essential for solving problems in Data Structures and Algorithms. Topics such as prime numbers, GCD/LCM, modular arithmetic, and factorization are covered
